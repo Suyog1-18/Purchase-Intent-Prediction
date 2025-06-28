@@ -1,86 +1,46 @@
 # 🧠 Customer Intention Predictor (0% - 100%)
 
-This project predicts **customer purchase intention as a percentage (0–100%)** using a machine learning model built with **Gradient Boosting Regressor** in Python. It also includes SQL-based behavioral analysis to extract meaningful insights from user activity logs.
+This project predicts **customer purchase intention** as a percentage between 0% and 100% using a regression model trained on customer interaction data. It also includes SQL-based behavioral feature extraction and a Gradio-based web interface for live model interaction.
 
 ---
 
+## 📁 Project Structure
 
-## 📁 Project Structure 
 
-
-customer-intention-predictor/
-├── project_ml.ipynb               # Jupyter Notebook for ML model training and evaluation
-├── model.pkl                      # Trained scikit-learn model saved with joblib
-├── requirements.txt               # Python dependencies for running the app
-├── data2.csv                      # Processed dataset used for training
-├── coustumer_data_for_ml_2.csv   # Original/raw dataset
-├── MySQL_project.sql              # SQL query for behavioral feature extraction
-├── app.py                         # Gradio app to interact with the model (optional)
-└── README.md                      # Project documentation
 
 ---
 
 ## 🚀 Objective
 
-- Train a regression model to predict **purchase intention score (%)** based on user behavior data.
-- Analyze customer interaction data (views, add-to-cart, transactions) using SQL.
-- Deploy the model with a user-friendly Gradio interface.
+- Predict how likely a customer is to make a purchase based on behavioral data.
+- Build a regression model that outputs the **purchase intention** as a percentage.
+- Analyze raw event logs using SQL and use the output as features for ML.
+- Provide a clean and interactive UI for real-time prediction using **Gradio**.
 
 ---
 
-## 📊 Model Details
+## 🛠️ Technologies Used
 
-- **Algorithm**: `GradientBoostingRegressor` (scikit-learn)
-- **Target Output**: Continuous percentage (0% to 100%)
+- **Python 3.x**
+- **scikit-learn** for machine learning
+- **joblib** for model saving/loading
+- **Gradio** for UI deployment
+- **MySQL** for SQL-based behavioral feature extraction
+- **Jupyter Notebook** for development and EDA
+
+---
+
+## 📊 Model Information
+
+- **Algorithm**: GradientBoostingRegressor
 - **Evaluation Metrics**:
   - Mean Absolute Error (MAE)
   - Mean Squared Error (MSE)
   - R² Score
 
----
+```python
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-# Example input: "0.5, 12, 3"
-Predicted Customer Intention: 83.45%
-🧮 SQL Component
-File: MySQL_project.sql
-
-This query performs customer session analysis:
-
-Total views, add-to-cart, and transactions per visitorid
-
-Session duration in minutes
-
-sql
-Copy
-Edit
-SELECT 
-    visitorid,
-    COUNT(CASE WHEN event = 'view' THEN 1 END) AS no_views,
-    COUNT(CASE WHEN event = 'addtocart' THEN 1 END) AS no_addtocart,
-    COUNT(CASE WHEN event = 'transaction' THEN 1 END) AS no_transaction,
-    (MAX(timestamp) - MIN(timestamp)) / (1000 * 60) AS time_spent_minutes
-FROM events
-GROUP BY visitorid
-ORDER BY visitorid;
-This analysis was used to prepare features for the machine learning model.
-
-📂 Data Files
-coustumer_data_for_ml_2.csv – Raw data from customer session logs.
-
-data2.csv – Cleaned and feature-engineered dataset used for model training.
-
-💡 Future Improvements
-Deploy app using Hugging Face Spaces or Streamlit Cloud
-
-Incorporate time-based features and device/user type
-
-Add SHAP values for model explainability
-
-Auto-sync SQL → ML pipeline
-
-👨‍💻 Author
-Suyog Bewle
-B.Tech, Mechanical Engineering
-Indian Institute of Technology, Ropar
-LinkedIn (Add your profile)
-
+print("MAE:", mean_absolute_error(y_test, y_pred))
+print("MSE:", mean_squared_error(y_test, y_pred))
+print("R² Score:", r2_score(y_test, y_pred))
