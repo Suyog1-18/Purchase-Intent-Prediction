@@ -6,7 +6,7 @@ This project predicts **customer purchase intention as a percentage (0–100%)**
 
 ## 📁 Project Structure
 
-customer-intention-predictor
+**customer-intention-predictor**
 ─ project_ml.ipynb # ML model training and evaluation
 ─ model.pkl # Trained ML model
 ─ requirements.txt # Python dependencies
