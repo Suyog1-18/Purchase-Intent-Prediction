@@ -6,14 +6,14 @@ This project predicts **customer purchase intention as a percentage (0–100%)**
 
 ## 📁 Project Structure
 
-customer-intention-predictor/
-├── project_ml.ipynb # ML model training and evaluation/
-├── model.pkl # Trained ML model/
-├── requirements.txt # Python dependencies/
-├── data2.csv # Cleaned/preprocessed dataset/
-├── coustumer_data_for_ml_2.csv # Raw input dataset/
-├── MySQL_project.sql # SQL query for user behavior analysis/
-└── README.md # Project documentation/
+customer-intention-predictor
+─ project_ml.ipynb # ML model training and evaluation
+─ model.pkl # Trained ML model
+─ requirements.txt # Python dependencies
+─ data2.csv # Cleaned/preprocessed dataset
+─ coustumer_data_for_ml_2.csv # Raw input dataset
+─ MySQL_project.sql # SQL query for user behavior analysis
+─ README.md # Project documentation
 
 yaml
 Copy
