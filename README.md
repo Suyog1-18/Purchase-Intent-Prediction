@@ -5,7 +5,17 @@ This project predicts **customer purchase intention** as a percentage between 0%
 ---
 
 ## 📁 Project Structure
+A Jupyter Notebook with the complete ML workflow (project_ml.ipynb)
 
+SQL query used for feature engineering (MySQL_project.sql)
+
+Cleaned datasets (coustumer_data_for_ml_2.csv, data2.csv)
+
+Trained model (model.pkl)
+
+Python dependencies (requirements.txt)
+
+A ready-to-use UI using Gradio for real-time prediction
 
 
 ---
