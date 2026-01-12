@@ -34,7 +34,6 @@ This project predicts **customer purchase intention** as a percentage between 0%
 - **Python 3.x**
 - **scikit-learn** for machine learning
 - **joblib** for model saving/loading
-- **Gradio** for UI deployment
 - **MySQL** for SQL-based behavioral feature extraction
 - **Jupyter Notebook** for development and EDA
 
