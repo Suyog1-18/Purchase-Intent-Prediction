@@ -15,7 +15,6 @@ This project predicts **customer purchase intention** as a percentage between 0%
 
 - Python dependencies (requirements.txt)
 
-- A ready-to-use UI using Gradio for real-time prediction
 
 
 ---
