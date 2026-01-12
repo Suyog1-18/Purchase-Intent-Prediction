@@ -24,7 +24,6 @@ This project predicts **customer purchase intention** as a percentage between 0%
 - Predict how likely a customer is to make a purchase based on behavioral data.
 - Build a regression model that outputs the **purchase intention** as a percentage.
 - Analyze raw event logs using SQL and use the output as features for ML.
-- Provide a clean and interactive UI for real-time prediction using **Gradio**.
 
 ---
 
