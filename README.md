@@ -180,7 +180,6 @@ Enter a session's behavior (views, add-to-cart count, unique items viewed, durat
 ---
 
 ## 👤 Author
-
 **<Suyog Bewle>**
 
 ---
