@@ -128,7 +128,7 @@ Test set of 352,335 sessions (2,859 purchases), default 0.5 threshold:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone https://github.com/Suyog1-18/Purchase-Intent-Prediction.git
 cd <your-repo>
 ```
 
